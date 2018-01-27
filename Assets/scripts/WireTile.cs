@@ -4,10 +4,10 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class WaterTile : Tile
+public class WireTile : Tile
 {
     /// <summary>
-    /// An array with all the waterTiles that we have in our game
+    /// An array with all the wireTiles that we have in our game
     /// </summary>
     [SerializeField]
     private Sprite[] wireSprites;
@@ -54,7 +54,7 @@ public class WaterTile : Tile
             {
                 if (x != 0 || y != 0) //Makes sure that we aren't checking our self
                 {
-                    //If the value is a watertile
+                    //If the value is a wireTile
                     if (HasWater(tilemap, new Vector3Int(location.x + x, location.y + y, location.z)))
                     {
                         composition += 'W'; 
@@ -142,15 +142,15 @@ public class WaterTile : Tile
 
 
 #if UNITY_EDITOR
-    [MenuItem("Assets/Create/Tiles/WaterTile")]
-    public static void CreateWaterTile()
+    [MenuItem("Assets/Create/Tiles/WireTile")]
+    public static void CreateWireTile()
     {
-        string path = EditorUtility.SaveFilePanelInProject("Save Watertile", "New Watertile", "asset", "Save watertile", "Assets");
+        string path = EditorUtility.SaveFilePanelInProject("Save WireTile", "New WireTile", "asset", "Save wireTile", "Assets");
         if (path == "")
         {
             return;
         }
-        AssetDatabase.CreateAsset(ScriptableObject.CreateInstance<WaterTile>(), path);
+        AssetDatabase.CreateAsset(ScriptableObject.CreateInstance<WireTile>(), path);
     }
 
 #endif
