@@ -582,7 +582,7 @@ GameObject:
   - component: {fileID: 1344090934}
   - component: {fileID: 1344090933}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: WireController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -599,9 +599,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 859c6ab4c87434341815165f610ce632, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grid: {fileID: 151604375}
-  tilemap: {fileID: 1218557910}
-  wireTile: {fileID: 11400000, guid: 6ee4453da78a64ae5a4eefb674c404df, type: 2}
+  Grid: {fileID: 151604375}
+  Tilemap: {fileID: 1218557910}
+  WireTile: {fileID: 11400000, guid: 6ee4453da78a64ae5a4eefb674c404df, type: 2}
 --- !u!4 &1344090934
 Transform:
   m_ObjectHideFlags: 0
