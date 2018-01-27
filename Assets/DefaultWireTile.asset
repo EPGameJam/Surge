@@ -33,5 +33,21 @@ MonoBehaviour:
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 1
   m_ColliderType: 1
-  wireSprites: []
+  wireSprites:
+  - {fileID: 21300000, guid: e5e26a84fd26243d1ab3b49946b99a06, type: 3}
+  - {fileID: 21300000, guid: a89acac7587c34e968fae445688f49e4, type: 3}
+  - {fileID: 21300000, guid: 83e2f6a5122704be8b31a88e43b5ba85, type: 3}
+  - {fileID: 21300000, guid: c54a214d205364ae5890d593c71125e7, type: 3}
+  - {fileID: 21300000, guid: fe9e074c14a294be0a8122e5a92be4a2, type: 3}
+  - {fileID: 21300000, guid: c0772c53989db49869cbdbda50210c88, type: 3}
+  - {fileID: 21300000, guid: 2eb04f0e2cb114638948587b37c2b3af, type: 3}
+  - {fileID: 21300000, guid: c1a9060e0fd9449d089eebc0fa00aac2, type: 3}
+  - {fileID: 21300000, guid: 071733d7a97704bbbad761d1080b57ec, type: 3}
+  - {fileID: 21300000, guid: 367679579b1634474b356994cfd00180, type: 3}
+  - {fileID: 21300000, guid: cde7ae17b2c724bdaa8f20d1b1b042c5, type: 3}
+  - {fileID: 21300000, guid: 64ba40167cecd4fe8a37be376d6c8c30, type: 3}
+  - {fileID: 21300000, guid: d3c2c17418a4841239dfe8f4c0f04105, type: 3}
+  - {fileID: 21300000, guid: f6f6683e567004b54a26840ec46eedcc, type: 3}
+  - {fileID: 21300000, guid: c86fdf5bf386f4697a97ebd9bd88e4a5, type: 3}
+  - {fileID: 21300000, guid: 0e939438a740647bfa9e40ada4d8559f, type: 3}
   preview: {fileID: 0}
