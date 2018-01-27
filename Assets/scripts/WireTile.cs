@@ -10,7 +10,7 @@ public class WaterTile : Tile
     /// An array with all the waterTiles that we have in our game
     /// </summary>
     [SerializeField]
-    private Sprite[] waterSprites;
+    private Sprite[] wireSprites;
 
     //A preview of the tile
     [SerializeField]
@@ -69,191 +69,68 @@ public class WaterTile : Tile
             }
         }
 
-
         //Changes the sprite based on what we see.
         if (composition[1] == 'E' && composition[3] == 'E' && composition[4] == 'E' && composition[6] == 'E')
         {
-            tileData.sprite = waterSprites[0];
-        }
-        else if (composition[1] == 'E' && composition[3] == 'W' && composition[4] == 'E' && composition[5] == 'W' && composition[6] == 'W')
-        {
-            tileData.sprite = waterSprites[1];
+            tileData.sprite = wireSprites[0];
         }
         else if (composition[1] == 'E' && composition[3] == 'W' && composition[4] == 'E' && composition[5] == 'E' && composition[6] == 'W')
         {
-            tileData.sprite = waterSprites[2];
-        }
-        else if (composition[0] == 'W' && composition[1] == 'W' && composition[3] == 'W' && composition[4] == 'E' && composition[5] == 'W' && composition[6] == 'W')
-        {
-            tileData.sprite = waterSprites[3];
-        }
-        else if (composition[0] == 'W' && composition[1] == 'W' && composition[3] == 'W' && composition[4] == 'E' && composition[6] == 'E')
-        {
-            tileData.sprite = waterSprites[4];
+            tileData.sprite = wireSprites[1];
         }
         else if (composition[0] == 'E' && composition[1] == 'W' && composition[3] == 'W' && composition[4] == 'E' && composition[6] == 'E')
         {
-            tileData.sprite = waterSprites[5];
-        }
-        else if (composition[0] == 'E' && composition[1] == 'W' && composition[3] == 'W' && composition[4] == 'E' && composition[5] == 'W' && composition[6] == 'W')
-        {
-            tileData.sprite = waterSprites[6];
-        }
-        else if (composition[1] == 'E' && composition[3] == 'W' && composition[4] == 'W' && composition[5] == 'W' && composition[6] == 'W' && composition[7] == 'W')
-        {
-            tileData.sprite = waterSprites[7];
-        }
-        else if (composition[1] == 'E' && composition[3] == 'W' && composition[4] == 'W' && composition[6] == 'W' && composition[5] == 'E' && composition[7] == 'W')
-        {
-            tileData.sprite = waterSprites[8];
-        }
-        else if (composition[1] == 'E' && composition[3] == 'W' && composition[4] == 'W' && composition[5] == 'W' && composition[6] == 'W' && composition[7] == 'E')
-        {
-            tileData.sprite = waterSprites[9];
+            tileData.sprite = wireSprites[2];
         }
         else if (composition[1] == 'E' && composition[3] == 'W' && composition[4] == 'W' && composition[5] == 'E' && composition[6] == 'W' && composition[7] == 'E')
         {
-            tileData.sprite = waterSprites[10];
-        }
-        else if (composition[0] == 'E' && composition[1] == 'W' && composition[2] == 'W' && composition[3] == 'W' && composition[4] == 'W' && composition[6] == 'E')
-        {
-            tileData.sprite = waterSprites[11];
-        }
-        else if (composition[0] == 'W' && composition[1] == 'W' && composition[2] == 'W' && composition[3] == 'W' && composition[4] == 'W' && composition[6] == 'E')
-        {
-            tileData.sprite = waterSprites[12];
-        }
-        else if (composition[0] == 'W' && composition[1] == 'W' && composition[2] == 'E' && composition[3] == 'W' && composition[4] == 'W' && composition[6] == 'E')
-        {
-            tileData.sprite = waterSprites[13];
-        }
-        else if (composition[0] == 'W' && composition[1] == 'W' && composition[3] == 'W' && composition[4] == 'E' && composition[5] == 'E' && composition[6] == 'W')
-        {
-            tileData.sprite = waterSprites[14];
+            tileData.sprite = wireSprites[3];
         }
         else if (composition[0] == 'E' && composition[1] == 'W' && composition[2] == 'E' && composition[3] == 'W' && composition[4] == 'W' && composition[6] == 'E')
         {
-            tileData.sprite = waterSprites[15];
+            tileData.sprite = wireSprites[4];
         }
         else if (composition[0] == 'E' && composition[1] == 'W' && composition[3] == 'W' && composition[4] == 'E' && composition[5] == 'E' && composition[6] == 'W')
         {
-            tileData.sprite = waterSprites[16];
-        }
-        else if (composition[1] == 'E' && composition[3] == 'E' && composition[4] == 'W' && composition[6] == 'W' && composition[7] == 'W')
-        {
-            tileData.sprite = waterSprites[17];
+            tileData.sprite = wireSprites[5];
         }
         else if (composition[1] == 'E' && composition[3] == 'E' && composition[4] == 'W' && composition[6] == 'W' && composition[7] == 'E')
         {
-            tileData.sprite = waterSprites[18];
-        }
-        else if (composition[1] == 'W' && composition[2] == 'W' && composition[4] == 'W' && composition[3] == 'E' && composition[6] == 'W' && composition[7] == 'W')
-        {
-            tileData.sprite = waterSprites[19];
-        }
-        else if (composition[1] == 'W' && composition[2] == 'W' && composition[3] == 'E' && composition[4] == 'W' && composition[6] == 'W' && composition[7] == 'E')
-        {
-            tileData.sprite = waterSprites[20];
-        }
-        else if (composition[1] == 'W' && composition[2] == 'E' && composition[3] == 'E' && composition[4] == 'W' && composition[6] == 'W' && composition[7] == 'W')
-        {
-            tileData.sprite = waterSprites[21];
+            tileData.sprite = wireSprites[6];
         }
         else if (composition[1] == 'W' && composition[2] == 'E' && composition[3] == 'E' && composition[4] == 'W' && composition[6] == 'W' && composition[7] == 'E')
         {
-            tileData.sprite = waterSprites[22];
-        }
-        else if (composition[1] == 'W' && composition[2] == 'W' && composition[3] == 'E' && composition[4] == 'W' && composition[6] == 'E')
-        {
-            tileData.sprite = waterSprites[23];
+            tileData.sprite = wireSprites[7];
         }
         else if (composition[1] == 'W' && composition[2] == 'E' && composition[3] == 'E' && composition[4] == 'W' && composition[6] == 'E')
         {
-            tileData.sprite = waterSprites[24];
+            tileData.sprite = wireSprites[8];
         }
         else if (composition[1] == 'W' && composition[3] == 'E' && composition[4] == 'E' && composition[6] == 'E')
         {
-            tileData.sprite = waterSprites[25];
+            tileData.sprite = wireSprites[9];
         }
         else if (composition[1] == 'E' && composition[3] == 'E' && composition[4] == 'E' && composition[6] == 'W')
         {
-            tileData.sprite = waterSprites[26];
+            tileData.sprite = wireSprites[10];
         }
         else if (composition[1] == 'W' && composition[3] == 'E' && composition[4] == 'E' && composition[6] == 'W')
         {
-            tileData.sprite = waterSprites[27];
+            tileData.sprite = wireSprites[11];
         }
         else if (composition[1] == 'E' && composition[4] == 'W' && composition[3] == 'W' && composition[6] == 'E')
         {
-            tileData.sprite = waterSprites[28];
+            tileData.sprite = wireSprites[12];
         }
         else if (composition[1] == 'E' && composition[3] == 'E' && composition[6] == 'E' && composition[4] == 'W')
         {
-            tileData.sprite = waterSprites[29];
+            tileData.sprite = wireSprites[13];
         }
-        else if (composition[1] == 'E' && composition[3] == 'W' && composition[4] == 'E' && composition[6] == 'E')
-        {
-            tileData.sprite = waterSprites[30];
+        else if (composition[1] == 'E' && composition[3] == 'W' && composition[4] == 'E' && composition[6] == 'E'){
+            tileData.sprite = wireSprites[14];
         }
-        else if (composition == "EWWWWEWW")
-        {
-            tileData.sprite = waterSprites[31];
-        }
-        else if (composition == "EWEWWWWE")
-        {
-            tileData.sprite = waterSprites[32];
-        }
-        else if (composition == "EWEWWWWW")
-        {
-            tileData.sprite = waterSprites[33];
-        }
-        else if (composition == "WWWWWEWW")
-        {
-            tileData.sprite = waterSprites[34];
-        }
-        else if (composition == "WWEWWWWE")
-        {
-            tileData.sprite = waterSprites[35];
-        }
-        else if (composition == "WWWWWWWE")
-        {
-            tileData.sprite = waterSprites[36];
-        }
-        else if (composition == "EWWWWWWW")
-        {
-            tileData.sprite = waterSprites[37];
-        }
-        else if (composition == "WWEWWWWW")
-        {
-            tileData.sprite = waterSprites[38];
-        }
-        else if (composition == "EWWWWWWE")
-        {
-            tileData.sprite = waterSprites[39];
-        }
-        else if (composition == "EWWWWEWE")
-        {
-            tileData.sprite = waterSprites[40];
-        }
-        else if (composition == "WWWWWEWE")
-        {
-            tileData.sprite = waterSprites[41];
-        }
-        else if (composition == "WWEWWEWW")
-        {
-            tileData.sprite = waterSprites[42];
-        }
-        else if (composition == "EWEWWEWW")
-        {
-            tileData.sprite = waterSprites[43];
-        }
-        else if (composition == "WWEWWEWE")
-        {
-            tileData.sprite = waterSprites[44];
-        }
-        else if (composition == "EWEWWEWE")
-        {
-            tileData.sprite = waterSprites[45];
+        else if (composition == "EWEWWEWE"){
+            tileData.sprite = wireSprites[15];
         }
 
     }
