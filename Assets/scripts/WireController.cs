@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.Experimental.UIElements;
 using UnityEngine.Tilemaps;
@@ -11,7 +12,11 @@ public class WireController : MonoBehaviour
 
 	public Tilemap Tilemap;
 
-	public Tile WireTile;
+	public Tile WireTileGreen;
+	public Tile WireTileYellow;
+	public Tile WireTileRed;
+	public Tile WireTileTransformer;
+	
 
 	public GameObject InvisibleWall;
 	
@@ -34,10 +39,31 @@ public class WireController : MonoBehaviour
 					bool exec = ItemCountController.SelectUpdate(currentlySelectedObj);
 					if (exec)
 					{
-						Tilemap.SetTile(cellPos, WireTile);
+						UpdateTileBasedOnCurrentSelect(currentlySelectedObj, cellPos);
 					}
 				}
 			}
+		}
+	}
+
+	void UpdateTileBasedOnCurrentSelect(int itemNum, Vector3Int cellPos) 
+	{
+		switch (itemNum)
+		{
+				case 1:
+					Tilemap.SetTile(cellPos, WireTileGreen);
+					return;
+				case 2:
+					Tilemap.SetTile(cellPos, WireTileYellow);
+					return;
+				case 3:
+					Tilemap.SetTile(cellPos, WireTileRed);
+					return;
+				case 4:
+					Tilemap.SetTile(cellPos, WireTileTransformer);
+					return;
+				default:
+					return;
 		}
 	}
 

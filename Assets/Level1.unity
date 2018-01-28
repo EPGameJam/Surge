@@ -3222,7 +3222,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Grid: {fileID: 151604375}
   Tilemap: {fileID: 1218557910}
-  WireTile: {fileID: 11400000, guid: 6ee4453da78a64ae5a4eefb674c404df, type: 2}
+  WireTileGreen: {fileID: 11400000, guid: 6ee4453da78a64ae5a4eefb674c404df, type: 2}
+  WireTileYellow: {fileID: 11400000, guid: 79943f93a64184d1889848ad9e8d5be5, type: 2}
+  WireTileRed: {fileID: 11400000, guid: 19161ee7efcba448aa631e0ea4e74640, type: 2}
   InvisibleWall: {fileID: 1973138291}
 --- !u!4 &1344090934
 Transform:
