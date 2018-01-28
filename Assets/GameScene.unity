@@ -670,6 +670,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f1f3f129c3354be6a499b8261e6d2f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Grid: {fileID: 151604375}
+  ToolTilemap: {fileID: 1611052836}
+  ToolSelected: 0
+  ToolSprites:
+  - {fileID: 21300000, guid: e5e26a84fd26243d1ab3b49946b99a06, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &463460564
 GameObject:
   m_ObjectHideFlags: 0
