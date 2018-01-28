@@ -671,6 +671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Grid: {fileID: 151604375}
+  Collider: {fileID: 1973138291}
   ToolTilemap: {fileID: 1611052836}
   ToolSelected: 0
   ToolSprites:
@@ -679,6 +680,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  Shader: {fileID: 4800000, guid: 890489e70ec1041e5bf98781f1bc9fe0, type: 3}
 --- !u!1 &463460564
 GameObject:
   m_ObjectHideFlags: 0
