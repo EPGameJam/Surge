@@ -1613,6 +1613,8 @@ MonoBehaviour:
   cashText: {fileID: 455361085}
   powerValue: 20
   powerText: {fileID: 2007619517}
+  timeText: {fileID: 2004101206}
+  time: 0
 --- !u!1 &1538227995
 GameObject:
   m_ObjectHideFlags: 0
@@ -2056,7 +2058,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 2:25
+  m_Text: 0:00
 --- !u!222 &2004101207
 CanvasRenderer:
   m_ObjectHideFlags: 0
