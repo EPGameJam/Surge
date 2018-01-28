@@ -17,7 +17,7 @@ public class InventorySelection : MonoBehaviour
 	public GameObject Transformer; //4
 	public GameObject TextHighliter4;
 
-	private int CurrentlySelectedObj;
+	public static int CurrentlySelectedObj;
 
 	// Use this for initialization
 	void Start ()

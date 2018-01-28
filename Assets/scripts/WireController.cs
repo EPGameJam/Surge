@@ -28,7 +28,12 @@ public class WireController : MonoBehaviour
 			if (Utils.CheckInBoundary(InvisibleWall.GetComponent<Collider>(), mousePos))
 			{
 				var cellPos = Grid.WorldToCell(Camera.main.ScreenToWorldPoint(mousePos));
-				Tilemap.SetTile(cellPos, WireTile);
+				if (!Tilemap.HasTile(cellPos))
+				{
+					int currentlySelectedObj = InventorySelection.CurrentlySelectedObj;
+					ItemCountController.SelectUpdate(currentlySelectedObj);
+					Tilemap.SetTile(cellPos, WireTile);
+				}
 			}
 		}
 	}
