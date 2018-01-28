@@ -31,8 +31,11 @@ public class WireController : MonoBehaviour
 				if (!Tilemap.HasTile(cellPos))
 				{
 					int currentlySelectedObj = InventorySelection.CurrentlySelectedObj;
-					ItemCountController.SelectUpdate(currentlySelectedObj);
-					Tilemap.SetTile(cellPos, WireTile);
+					bool exec = ItemCountController.SelectUpdate(currentlySelectedObj);
+					if (exec)
+					{
+						Tilemap.SetTile(cellPos, WireTile);
+					}
 				}
 			}
 		}

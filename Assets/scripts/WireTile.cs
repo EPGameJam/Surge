@@ -47,7 +47,7 @@ public class WireTile : Tile
     public override void GetTileData(Vector3Int location, ITilemap tilemap, ref TileData tileData)
     {
         string composition = string.Empty;//Makes an empty string as compostion, we need this so that we change the sprite
-
+        
         for (int x = -1; x <= 1; x++)//Runs through all neighbours 
         {
             for (int y = -1; y <= 1; y++)

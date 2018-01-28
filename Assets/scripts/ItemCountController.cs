@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization.Formatters;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -48,24 +49,40 @@ public class ItemCountController : MonoBehaviour
 		TextCash.text = CashTotal.ToString();
 	}
 
-	public static void SelectUpdate(int num)
+	public static bool SelectUpdate(int num)
 	{
 		switch (num)
 		{
 				case 1:
-					CashTotal -= Cost1;
-					return;
+					if (Wire1TotalNum > 0)
+					{
+						CashTotal -= Cost1;
+						return true;
+					}
+					return false;
 				case 2:
-					CashTotal -= Cost2;
-					return;
+					if (Wire2TotalNum > 0)
+					{
+						CashTotal -= Cost2;
+						return true;
+					}
+					return false;
 				case 3:
-					CashTotal -= Cost3;
-					return;
+					if (Wire3TotalNum > 0)
+					{
+						CashTotal -= Cost3;
+						return true;
+					}
+					return false;
 				case 4:
-					CashTotal -= Cost4;
-					return;
+					if (TransformerNum > 0)
+					{
+						CashTotal -= Cost4;
+						return true;
+					}
+					return false;
 				default:
-					return;
+					return false;
 		}
 	}
 }
