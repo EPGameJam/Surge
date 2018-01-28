@@ -16,6 +16,7 @@ public class WireController : MonoBehaviour
 	public Tile WireTileYellow;
 	public Tile WireTileRed;
 	public Tile WireTileTransformer;
+	public Tile WireTileSubstation;
 	
 
 	public GameObject InvisibleWall;
@@ -61,6 +62,9 @@ public class WireController : MonoBehaviour
 					return;
 				case 4:
 					Tilemap.SetTile(cellPos, WireTileTransformer);
+					return;
+				case 5:
+					Tilemap.SetTile(cellPos, WireTileSubstation);
 					return;
 				default:
 					return;

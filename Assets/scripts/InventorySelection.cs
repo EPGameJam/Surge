@@ -17,6 +17,9 @@ public class InventorySelection : MonoBehaviour
 	public GameObject Transformer; //4
 	public GameObject TextHighliter4;
 
+	public GameObject Substation; //5
+	public GameObject TextHighliter5;
+
 	public static int CurrentlySelectedObj;
 
 	// Use this for initialization
@@ -65,6 +68,12 @@ public class InventorySelection : MonoBehaviour
 					DisableCurrentItem(CurrentlySelectedObj);
 					CurrentlySelectedObj = 4;
 					return;
+				case 5: 
+					SpriteRenderer textHighliter5Renderer = TextHighliter5.GetComponent<SpriteRenderer>();
+					textHighliter5Renderer.enabled = true;
+					DisableCurrentItem(CurrentlySelectedObj);
+					CurrentlySelectedObj = 5;
+					return;
 				default:
 					return;
 			}
@@ -77,6 +86,7 @@ public class InventorySelection : MonoBehaviour
 		Collider2D wire2Collider = Wire2.GetComponent<Collider2D>();
 		Collider2D wire3Collider = Wire3.GetComponent<Collider2D>();
 		Collider2D transformerCollider = Transformer.GetComponent<Collider2D>();
+		Collider2D substationCollider = Substation.GetComponent<Collider2D>();
 		Vector2 mouseVec = new Vector2(mousePos.x, mousePos.y);
 
 		if (wire1Collider.bounds.Contains(mouseVec))
@@ -91,6 +101,9 @@ public class InventorySelection : MonoBehaviour
 		} else if (transformerCollider.bounds.Contains(mouseVec))
 		{
 			return 4;
+		} else if (substationCollider.bounds.Contains(mouseVec))
+		{
+			return 5;
 		}
 		else
 		{
@@ -117,6 +130,10 @@ public class InventorySelection : MonoBehaviour
 			case 4:
 				SpriteRenderer textHighliter4Renderer = TextHighliter4.GetComponent<SpriteRenderer>();
 				textHighliter4Renderer.enabled = false;
+				return;
+			case 5:
+				SpriteRenderer textHighliter5Renderer = TextHighliter5.GetComponent<SpriteRenderer>();
+				textHighliter5Renderer.enabled = false;
 				return;
 			default:
 				return;

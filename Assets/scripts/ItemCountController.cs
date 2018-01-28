@@ -20,7 +20,11 @@ public class ItemCountController : MonoBehaviour
 
 	public Text TransformerText;
 	public static int TransformerNum = 20;
-	public static int Cost4 = 20;
+	public static int Cost4 = 10;
+	
+	public Text SubstationText;
+	public static int SubstationNum = 20;
+	public static int Cost5 = 20;
 
 	public Text TextCash;
 	public static int CashTotal = 100;
@@ -42,10 +46,12 @@ public class ItemCountController : MonoBehaviour
 		Wire2TotalNum = CashTotal / Cost2;
 		Wire3TotalNum = CashTotal / Cost3;
 		TransformerNum = CashTotal / Cost4;
+		SubstationNum = CashTotal / Cost5;
 		Wire1Text.text = Wire1TotalNum.ToString();
 		Wire2Text.text = Wire2TotalNum.ToString();
 		Wire3Text.text = Wire3TotalNum.ToString();
 		TransformerText.text = TransformerNum.ToString();
+		SubstationText.text = SubstationNum.ToString();
 		TextCash.text = CashTotal.ToString();
 	}
 
@@ -78,6 +84,13 @@ public class ItemCountController : MonoBehaviour
 					if (TransformerNum > 0)
 					{
 						CashTotal -= Cost4;
+						return true;
+					}
+					return false;
+				case 5:
+					if (SubstationNum > 0)
+					{
+						CashTotal -= Cost5;
 						return true;
 					}
 					return false;
