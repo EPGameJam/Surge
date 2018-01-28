@@ -1452,6 +1452,7 @@ MonoBehaviour:
   Grid: {fileID: 151604375}
   Tilemap: {fileID: 1218557910}
   WireTile: {fileID: 11400000, guid: 6ee4453da78a64ae5a4eefb674c404df, type: 2}
+  InvisibleWall: {fileID: 1973138291}
 --- !u!4 &1344090934
 Transform:
   m_ObjectHideFlags: 0
@@ -1794,7 +1795,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1973138291}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
