@@ -37,7 +37,7 @@ public class PlacementHover : MonoBehaviour
 
         if (Utils.CheckInBoundary(Collider.GetComponent<Collider>(), mousePos))
         {
-            tile.color = new Color(0.66f, 0.75f, 1f, 1f);
+            tile.color = new Color(0.66f, 0.75f, 1f, 0.75f);
             //ToolTilemap.GetComponent<TilemapRenderer>().material.shader = Shader;
         }
         else
