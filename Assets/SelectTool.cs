@@ -1,12 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using NUnit.Framework;
-using UnityEngine;
-using UnityEngine.Rendering;
-
+﻿using UnityEngine;
 using System;
-using System.ComponentModel;
-using UnityEngine.UI;
 
 public class SelectTool : MonoBehaviour
 {
