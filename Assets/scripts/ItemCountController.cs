@@ -16,15 +16,15 @@ public class ItemCountController : MonoBehaviour
 
 	public Text Wire3Text;
 	public static int Wire3TotalNum = 20;
-	public static int Cost3 = 4;
+	public static int Cost3 = 5;
 
 	public Text TransformerText;
 	public static int TransformerNum = 20;
-	public static int Cost4 = 10;
+	public static int Cost4 = 20;
 	
 	public Text SubstationText;
 	public static int SubstationNum = 20;
-	public static int Cost5 = 20;
+	public static int Cost5 = 60;
 
 	public Text TextCash;
 	public static int CashTotal = 100;
