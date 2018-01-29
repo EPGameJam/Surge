@@ -10,7 +10,8 @@ public class WireController : MonoBehaviour
 {
 	public Grid Grid;
 
-	public Tilemap Tilemap;
+	public Tilemap WireTilemap;
+	public Tilemap TerrainTilemap;
 
 	public Tile WireTileGreen;
 	public Tile WireTileYellow;
@@ -34,7 +35,7 @@ public class WireController : MonoBehaviour
 			if (Utils.CheckInBoundary(InvisibleWall.GetComponent<Collider>(), mousePos))
 			{
 				var cellPos = Grid.WorldToCell(Camera.main.ScreenToWorldPoint(mousePos));
-				if (!Tilemap.HasTile(cellPos))
+				if (TerrainTilemap.HasTile(cellPos) && !WireTilemap.HasTile(cellPos))
 				{
 					int currentlySelectedObj = InventorySelection.CurrentlySelectedObj;
 					bool exec = ItemCountController.SelectUpdate(currentlySelectedObj);
@@ -52,19 +53,19 @@ public class WireController : MonoBehaviour
 		switch (itemNum)
 		{
 				case 1:
-					Tilemap.SetTile(cellPos, WireTileGreen);
+					WireTilemap.SetTile(cellPos, WireTileGreen);
 					return;
 				case 2:
-					Tilemap.SetTile(cellPos, WireTileYellow);
+					WireTilemap.SetTile(cellPos, WireTileYellow);
 					return;
 				case 3:
-					Tilemap.SetTile(cellPos, WireTileRed);
+					WireTilemap.SetTile(cellPos, WireTileRed);
 					return;
 				case 4:
-					Tilemap.SetTile(cellPos, WireTileTransformer);
+					WireTilemap.SetTile(cellPos, WireTileTransformer);
 					return;
 				case 5:
-					Tilemap.SetTile(cellPos, WireTileSubstation);
+					WireTilemap.SetTile(cellPos, WireTileSubstation);
 					return;
 				default:
 					return;

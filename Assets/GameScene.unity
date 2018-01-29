@@ -558,6 +558,7 @@ MonoBehaviour:
   Grid: {fileID: 151604375}
   Collider: {fileID: 1973138291}
   ToolTilemap: {fileID: 1611052836}
+  TerrainTilemap: {fileID: 714117542}
   ToolSelected: 0
   ToolSprites:
   - {fileID: 21300000, guid: e5e26a84fd26243d1ab3b49946b99a06, type: 3}
@@ -2068,7 +2069,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Grid: {fileID: 151604375}
-  Tilemap: {fileID: 1218557910}
+  WireTilemap: {fileID: 1218557910}
+  TerrainTilemap: {fileID: 714117542}
   WireTileGreen: {fileID: 11400000, guid: 6ee4453da78a64ae5a4eefb674c404df, type: 2}
   WireTileYellow: {fileID: 11400000, guid: 79943f93a64184d1889848ad9e8d5be5, type: 2}
   WireTileRed: {fileID: 11400000, guid: 19161ee7efcba448aa631e0ea4e74640, type: 2}

@@ -10,6 +10,7 @@ public class PlacementHover : MonoBehaviour
     public GameObject Collider;
 
     public Tilemap ToolTilemap;
+    public Tilemap TerrainTilemap;
 
     public int ToolSelected;
 
@@ -35,7 +36,7 @@ public class PlacementHover : MonoBehaviour
 
         var tile = ScriptableObject.CreateInstance<Tile>();
 
-        if (Utils.CheckInBoundary(Collider.GetComponent<Collider>(), mousePos))
+        if (TerrainTilemap.HasTile(cellPos))
         {
             tile.color = new Color(0.66f, 0.75f, 1f, 0.75f);
             //ToolTilemap.GetComponent<TilemapRenderer>().material.shader = Shader;
